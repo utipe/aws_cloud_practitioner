@@ -9,3 +9,41 @@ evolution of cloud hosting:
 
 AWS: Amazon cloud provider service
 CSP: 
+1/ provide multiple cloud services
+2/ those cloud services can be chained together to create cloud architectures
+3/ those cloud services are accessible via single unified API e.g. AWS API
+4/ utilized metered billing based on usages e.g. per second, per hour
+5/ have rich monitoring built in e.g. AWS Cloud Trail
+6/ have an Infrastructure as a Service (IaaS) offering
+7/ offers automation via Infrastructure as Code (IaC)
+-> a company which offers multiple cloud services under a single UI but do not meet most or all of these requirements -> Cloud platform e.g. Twilio, HashiCorp, Databricks
+
+Landscape of CSPs
+Tier 1: early to market, wide offerings, strong synergies between services, well recognized in the industry -> AWS, Azure, GCP, Alibaba CLoud
+Tier 2: backed by well-known tech, slow to innovate and turned to specialization e.g. IBM(AI ML solution), Oracle(price), Rackspace(on-premise)
+Tier 3: Virutal Private Servers turned to offer core IaaS offering -> simple and cost effective e.g. Vultr, Digital Ocean, Linode
+
+Gartner Magic Quadrant for Cloud: y -> ability to execute, x -> completeness of vision
+
+Common cloud services: CSP can have hundreds of cloud services that are grouped into various type of services 
+4 most common types of cloud services (4 core) for IaaS:
+1. Compute: virtual computer that can run application, programs, and code -> EC2 Virtual machine
+2. Networking: virtual network defining internet connections, network isolations between services or outbound to the internet -> VPC private cloud network
+3. Storage: virtual hard-drive that can store files -> EBS virtual hard drive 
+4. Database: virtual databse for storing reporting data or general purpose web app -> RDS SQL database 
+
+getting started -> documentation 
+
+Evolution of computing:
+1. Dedicated: a physical server wholly utilized by a single customer -> single tenant -> have to guess capacity, overpay underutilized server, can't vertical scale, limited by OS -> used for high performing computing
+2. VM: multiple virtual machines on 1 machine using hypervisor (software layer that lets you run the VMs) -> still have underutilization and limited by guest OS
+3. Container: multiple container using Docker deamon -> can max the utilization of capacity -> not cause conflic in resource sharing
+4. Functions: containers are managed by CSPs -> serverless compute -> just upload a piece of code, choose the amount of memory and duration -> only responsible for code and data -> very cost-effective since only pay for the time code is running -> problem: cold starts -> can be slow
+
+Types of cloud computing:
+1. SaaS: products run and managed by the service provider -> don't worry about how the service is maintained e.g. gmail, office 365
+2. PaaS: platform -> focus on deployment and management of your apps -> don't worry about provisioning/configuring the hardware/os e.g. heroku, google app engine,
+3. IaaS: basic building blocks for cloud IT -> access to networking features, computers, and data storage space -> don't worry about IT staff, data centers, and hardware
+
+Cloud Computing Deployment Models:
+
