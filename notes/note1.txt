@@ -1,0 +1,11 @@
+cloud computing: the practice of using a network of remote servers hosted on the internet to store, manage, and process data, rather than a local server or a personal computer
+-> only responsible fo configuring cloud services and codes
+
+evolution of cloud hosting:
+1. dedicated server: 1 physical machine dedicated to a single business
+2. virtual private serve - VPS: 1 physical machine, virtualized into sub-machines -> runs multiple apps/sites
+3. shared hosting: 1 physical machine, shared byy hundred of businesses -> poor isolation, 
+4. cloud hosting: distributed computing i.e. multiple physical machines that act as 1 system
+
+AWS: Amazon cloud provider service
+CSP: 
