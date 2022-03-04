@@ -46,4 +46,28 @@ Types of cloud computing:
 3. IaaS: basic building blocks for cloud IT -> access to networking features, computers, and data storage space -> don't worry about IT staff, data centers, and hardware
 
 Cloud Computing Deployment Models:
+1. Public Cloud: Everything is built on the CSP -> Cloud-native or cloud first
+2. Private Cloud: Everything built on company's datacenters -> On-premise -> cloud could be openstack
+3. Hybrid: both On-Premise and CSP -> connected by VPN Connection
+4. Cross-Cloud: Multiple Cloud Providers (multi-cloud, hybrid-cloud) e.g. Azure Arc, GCP's Anthos -> control plane for compute across multiple CSPs and On-premise environment
+
+Deployment Use Case:
+1. Cloud: new or small enough companies,
+2. Hybrid: already have their own datacenter, can't fully move to cloud dur to effort of migration or security compliance e.g. banks, fintech, legacy on-premise
+3. On premise: cannot run on cloud due to strict regulatory compliance or sheer size of organization e.g. government, hospitals, insurance companies
+
+Create IAM User:
+root user account -> email; IAM user -> account alias
+create IAM:
+1. add MFA
+2. Should create IAM user -> grant adminaccess, reset password and use this IAM user to log in
+
+AWS Region Selector:
+us-east-1: original region and has most access to AWS services
+Some services are GLobal i.e. don't require region selection e.g. cloudfront, e3
+
+AWS Budget:
+Create a budget -> cost budget -> add alert -> set threshold 
+
+AWS Free Tier
 
