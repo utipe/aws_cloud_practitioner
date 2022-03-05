@@ -70,4 +70,4 @@ AWS Budget:
 Create a budget -> cost budget -> add alert -> set threshold 
 
 AWS Free Tier
-
+available in the first 12 months 
