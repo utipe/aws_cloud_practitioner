@@ -72,3 +72,23 @@ Create a budget -> cost budget -> add alert -> set threshold
 AWS Free Tier
 available in the first 12 months 
 
+Benefit of CLoud:
+1. agility: increase speed and agility (ability to rapidly develop, test, and launch app)
+2. pay as you go pricing: trade capital for variable expense
+3. economy of scale
+4. global reach: go global in minutes
+5. security
+6. reliability: stop spending money on running and maintaining data centers
+7. high availability: ability of user to access info in a specified location in the correct format
+8. scalability: ~ economy of scale
+9. elasticity: ability to quickly increase/decrease computer processing, memory, and storage to meet changing demand
+ extra: fault tolerance (ability to continue operating uninteruptted despite the failure of 1+ of its components) and disaster recovery 
+
+7 advantages of cloud:
+1. PAYG
+2. Global: launch workloads anywhere
+3. Secure: secure by default
+4. Reliable: data backup, disaster recovery, data replication, and fault tolerance
+5. Scalable
+6. Elastic: Automate scaling during spikes/drop in demand
+7. Current: the underlying hardware and managed software is patched/upgraded/replaced by the cloud provider without interruption

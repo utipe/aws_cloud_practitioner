@@ -1,0 +1,36 @@
+Cloud Architecture Terminologies:
+Solution Archtect: architects a technical solution using multiple systems via resesarching, documentation, experimentation
+Cloud Architect: solution architect focusing solely on architecting technical solutions using cloud services
+Important factors to consider when designing solution architect:
+- availability: ensure a service remains available
+- scalability: ability to grow rapidly
+- elastcity: ability shrink/grow to meed the demand
+- fault tolerance
+- disaster recovery
+Also business factors:
+- Security: how secure is the solution
+- Cost: how much is this going to cost
+
+High Availability: running workload across multiple AZs -> use Elastic Load Balancer: evenly distribute traffic to multiple servers in 1 or more datacenter -> only route the traffic to available/healthy datacenter with servers
+
+High scalability: increase capacity based on the increasing demand of traffic/memory/computing power
+- vertical scaling: upgrade to bigger server
+- horizontal scaling: add more servers of the same size -> also increase availablity -> better
+
+High elasticity: ability to AUTOMATICALLY increase or DECREASE (automatic and can go both ways) your capacity based on the current demand
+- Horizonal scaling: scaling out vs. scaliing in
+- Vertical scaling is generally harder
+- Done through Auto Scaling Groups (ASG): AWS feature that automatically add/remove servers based on scaling rules
+
+Fault Tolerance: ensure there's no single point of failure
+- fail-overs: a plan to shift traffic to a redundant system in case the primary system fails
+- example: have a copy of your database where all ongoing changes are synced -> not in use until a fail over occurs -> becomes the primary database -> RDS Multi-AZ: run duplicate standby database in another AZ 
+
+High Durability: ability to recover from a disaster and to prevent the loss of data
+- do you have a backup
+- how fast can you restore that backup
+- does your backup still work
+- how do you ensure current live data is not corrupt
+-> cloudendure disaster recovery: continuously replicates your machines into a low-cost staging area in your target AWS account and preferred region -> enable fast, reliable recovery in case of IT data center failures.
+
+

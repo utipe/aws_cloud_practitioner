@@ -1,0 +1,2 @@
+1. which one is better/faster for CDN: Amazon CloudFront or AWS Global Accelerator? - note2, AWS Services using PoPs
+
