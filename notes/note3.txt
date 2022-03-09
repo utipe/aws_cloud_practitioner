@@ -33,4 +33,21 @@ High Durability: ability to recover from a disaster and to prevent the loss of d
 - how do you ensure current live data is not corrupt
 -> cloudendure disaster recovery: continuously replicates your machines into a low-cost staging area in your target AWS account and preferred region -> enable fast, reliable recovery in case of IT data center failures.
 
+Business Continuity Plan: outlined how a business will continue operating during an unplanned disruption in services
+- Recovery Point Objective (RPO): the maximum amount of data loss after an unplanned data-loss incident -> how much data are you willing to lose
+- Recovery Time Objective (RTO): the maximum of downtime your business can tolerate -> how much time are you willing to go down
 
+Disaster Recovery Option: tradeoff cost vs. time to recover 
+- Backup & restore: backup data and restore it to new infrastructure -> RPO/RTO: hours
+-> low priority, restore and deploy after event -> cheap
+- Pilot light: data is replicated to another region with the minial services running -> RPO/RTO: 10 mins
+-> core service, start and scale resources after event
+- Warm standby: scaled down copy of your infrastructure running, ready to scale up -> RPO/RTO: minutes
+-> business critical service, scale resource after event
+- Multi-site active: scaled up copy of your infrastructure in another region -> RPO/RTO: real-time
+-> mission critical service with zero downtime and near zero loss
+
+Architectural diagram explained:
+- need AWS architecture icon: https://aws.amazon.com/architecture/icons/
+
+ 
