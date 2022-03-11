@@ -50,4 +50,32 @@ Disaster Recovery Option: tradeoff cost vs. time to recover
 Architectural diagram explained:
 - need AWS architecture icon: https://aws.amazon.com/architecture/icons/
 
- 
+AWS API:
+- API: software that allows 2 applications/services to talk to each other -> most common: HTTP/S requests
+- AWS API: HTTP API -> can interact by sending HTTPS requets using things like Postman:
+	+ each service has its own service endpoint to send request
+	+ need a signed request -> make a separate request with AWS credentials to get back a token
+- rare use API directly but:
+	+ use AWS Management Console: web interface -> operate through ClickOps i.e. via clicks
+	+ AWS SDK: interact with API using programming language
+	+ AWS CLI: interact via a terminal/shell program
+-> docs.aws.amazon.com for further details
+
+Amazon Resource Name (ARN): uniquely identify Amazon resources -> specify resource unambiguusly across all of AWS
+- ARN format:
+	+ arn:partition:service:region:account-id:resource-id
+	+ arn:partition:service:region:account-id:resource-type/resource-id
+	+ arn:partition:service:region:account-id:resource-type:resource-id
+- partition: 
+	+ aws: AWS regions
+	+ aws-cn: China regions
+	+ aws-us-gov: AWS GovCloud
+- service: ec2, s3, iam
+- region: us-east-1, ca-central-1
+- account id: 12 digit id
+- resource id: user/Bon, instance/i-12345
+-> can be used in IAM policy
+
+AWS CLI: Python executable program -> aws
+- configure: aws configure --profile anleV1 import --csv file_path
+
