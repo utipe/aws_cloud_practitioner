@@ -78,4 +78,5 @@ Amazon Resource Name (ARN): uniquely identify Amazon resources -> specify resour
 
 AWS CLI: Python executable program -> aws
 - configure: aws configure --profile anleV1 import --csv file_path
-
+-> can specify a prfile and use the credentials and settings stored under that name e.g.
+aws s3 ls --profile name
