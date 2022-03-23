@@ -1,0 +1,31 @@
+AWS Toolkit for VSCode: open-source plugin for vscode to create, debug, deploy aws resources
+1. AWS Explorer: explore AWS resources linked to your account
+2. AWS CDK Explorer: explore your stacks defined by CDK
+3. Amazon Elastic Container service: auto-complete when using aws
+4. Serverless app: create, debug, deploy severless app via SAM and CFN
+
+Access keys: or AWS credentials -> key and secret required to have programmatic access to AWS resource when interacting with AWS API outside AWS console
+User must be granted access to use access key:
+- can have 2 active access keys at the same time
+- with AWS SDK -> better define environment variables:
+export AWS_ACCESS_KEY_ID; AWS_SECRET_ACCESS_KEY; AWS_DEFAULT_REGION
+
+shared responsibility model: cloud security framework that defines security obligations of the customer vs. CSP
+each CSP has their own variant of the SRM
+AWS SRM:
+- Customer: configuration of managed services, virtual infra, and security config of data
+- AWS: Software & hardware/global infra
+-> Customers are responsible for security IN the cloud i.e. the data and configuration; AWS is responsible for security OF the cloud i.e. hardware, operation of managed services, and global infrastructure
+
+Types of cloud computing responsibility: 
+On Premise: you responsible for everything
+IaaS: only app, data, runtime, middleware, os
+PaaS: app and data
+SaaS: nothing
+
+Compute Service: 
+IaaS: Bare Metal -> can install OS, hypervisor; AWS: physical machine; Virtual Machine -> guest OS, Container; AWS: hypervisor, physical machine; Containers -> config, deploy, storage of containers; AWS: OS, hypervisor, machine
+PaaS: Beanstalk -> code, environment config, deployment strategries; AWS: servers, OS, network, storage, security
+SaaS: Amazon Workdocs -> contents, file, access control; AWS: servers, os, network, storage, securiy
+Function as a Service: AWS Lambda -> code; AWS: everything else
+

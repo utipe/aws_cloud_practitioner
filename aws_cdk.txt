@@ -1,0 +1,2 @@
+AWS CDK app: app written in typescript, js, python that uses AWS CDK to define AWS infra -> define 1+ stacks.
+Stacks: contain construcs -> define 1 or more concrete AWS resources -> represented as classes

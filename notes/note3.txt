@@ -80,3 +80,38 @@ AWS CLI: Python executable program -> aws
 - configure: aws configure --profile anleV1 import --csv file_path
 -> can specify a prfile and use the credentials and settings stored under that name e.g.
 aws s3 ls --profile name
+aws s3 cp local_file.txt s3://bucket_name/remote_file.txt
+credentials are stored in ~/.aws/
+can direct modify credential in credential e.g. create new profile
+
+AWS SDK: 
+test on Amazon Cloud9
+
+IaC: write a config script to automate creating, updating, destroying cloud infrastructure
+- a blueprint of your infrastructure
+- allows you to easily share, version, inventory your cloud infrastructure
+AWS has 2 offerings:
+1. AWS CloudFormation (CFN) -> Declarativ IaC tool
+	+ what yu see is what you get -> explici
+	+ more verbose but 0 chance of mis-configuration
+	+ use scripting languages e.g. JSON, YAML, XML
+2. AWS Cloud Development Kit (CDK) -> Imperative IaC tool
+	+ you say what you want, the rest is filled in -> implicit
+	+ Less verbose, can misconfigure
+	+ does more than declarative
+	+ use programming languages e.g. Python, ruby, etc.
+
+AWS CFN: 
+- large file, limited in creaing dynamic or repeatable infrastructure compared to CDK
+- CDK can generate ou CloudFormation -> still need to read and understand CFN to debug IaC stacks.
+- create a yaml file -> upload to CFN or from CDK: 
+aws cloudformation create-stack --stack-name ... --template-url ...
+
+CDK: use programming language to write IaC
+- powered by CloudFormation -> generate out CFN templates
+- large library of reusable cloud components: CDK construct https://constructs.dev
+- CDK Pipelines -> setup CI/CD pipelines for CDK projects
+- CDK: has a testing framework for Unit and Integrating testing
+- ensures Idempotent of your Infrastructure
+
+
