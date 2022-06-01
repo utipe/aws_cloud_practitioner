@@ -1,0 +1,28 @@
+- DB and web server sharing data, running in the same VPC: ipv4 -> public subnet (EC2 with web app and own security group) -> private subnet (RDS DB instance with own security group)
+1. Create a VPC with private and public subnets:
+- Create a VPC and subnets
+- need an Elastic IP address to associate with a network address translation (NAT) gateway
+- the elsatic IPs should be in the same region where you want to create your VPC
+- Note the allocation ID of the new Elastic IP address as you'll need this info when you create your VPC
+e.g.: eipalloc-042c284a6da4bbd91
+- must have either 2 private subnets or 2 public subnets to create a DB subnet group for a DB instance to use in a VPC. Beacuase DB is private -> add a 2nd private subnet to the VPC
+2. Create a VPC security group for a public web server:
+- security group for public access -> add inbound rules to your VPC security group that allow traffic to connect from the internet -> note the security group id
+e.g.: sg-03f7664a60a8b8d04
+3. Create a VPC security group for a private DB instance:
+- only for private access -> allow inbound traffic from web server only
+4. Create a DB subnet group: a collection of subnets that you create in a VPC and then designate for your DB instances
+5. Create your RDS Database -> note the endpoint and port to connect your web server to your DB instance
+e.g.: data-utility.clg1vdbfdxex.ap-northeast-1.rds.amazonaws.com ; 5432
+6. Launch a "public" EC2 instance (configured to be SSH accessible from your IP only) -> note instance ID
+e.g.: i-01cc11b8edd0c0c57
+with the key.pem -> need to set the permissions of your private key file so that only you can read it:
+chmod 400 my-key-pair.pem
+7. SSH to your instance:
+- need instance ID: i-01cc11b8edd0c0c57
+- need public DNS name: ec2-54-250-171-216.ap-northeast-1.compute.amazonaws.com
+- username: either your user account or default user name for the AMI e.g. Amazon Linux AMI:ec2-user; Ubuntu AMI: ubuntu
+ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name
+Transfer file:
+scp -i /path/my-key-pair.pem /path/transfer-file user-name@public-dns-name:path/
+ 
