@@ -26,3 +26,16 @@ ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name
 Transfer file:
 scp -i /path/my-key-pair.pem /path/transfer-file user-name@public-dns-name:path/
  
+8. CONNECT through DBEAVER:
+- SSH:
+ssh -N -i ec2_key_pair_name.pem -L 5000:database_endpoint.com:database_port_number ec2-user@ec2_public_ipv4
+- Open DBeaver:
+	- Host: localhost, Port: 5000
+sofa-dm.github.io/aws/2021/08/28/how-to-connect-from-local-machine-to-aws-vpc/
+9. CONNECT through Python:
+from sshtunnel import SSHTunnelForwarder as SSHTF
+
+with SSHTF((ec2-public-DNS), ssh_username="ec2-user", ssh-pkey="", remote_bind_address(RDS-private-link, RDS-port) as tunnel:
+	* do something with the database e.g. connection established
+
+
